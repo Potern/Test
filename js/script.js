@@ -1,17 +1,22 @@
 /*jslint node: true */
 'use strict';
 
-const category = 'toys';
-console.log(`https://someurl.com/${category}/5`);
+const nubmerOfFilms = +prompt("Сколько фильмов вы уже посмотрели?","");
 
-const user ='Ivan';
-alert(`Привет, ${user}`);
+const personalMovieDB = {
+    count: nubmerOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-let poter = 10,
-    decr = 10;
+const a = prompt("Один из последних просмотренных фильмов", ''),
+      b = prompt("На сколько вы его оцените?", ''),
+      c = prompt("Один из последних просмотренных фильмов", ''),
+      d = prompt("На сколько вы его оцените?", '');
 
-poter++;
-decr--;
+      personalMovieDB.movies[a] = b;
+      personalMovieDB.movies[c] = d;
 
-console.log(poter);
-console.log(decr);
+      console.log(personalMovieDB);
